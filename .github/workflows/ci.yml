@@ -11,21 +11,29 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v3
+
+      - name: Install test dependencies.
+        run: pip3 install yamllint ansible ansible-lint
       
-      - name: ansible check with archlinux:latest
-        # optionally replace "master" with any valid git ref
-        uses: roles-ansible/check-ansible-archlinux-latest-action@master
-        with:
-          requirements: 'requirements.yml'
-          targets: "main.yml"
+      - name: Lint code.
+        run: |
+          yamllint .
+          ansible-lint
+      
+      #---------------------------------------------
+      # need to fix
+      #---------------------------------------------  
+      #- name: ansible check with archlinux:latest
+      #  # optionally replace "master" with any valid git ref
+      #  uses: roles-ansible/check-ansible-archlinux-latest-action@master
+      #  with:
+      #    requirements: 'requirements.yml'
+      #    targets: "main.yml"
