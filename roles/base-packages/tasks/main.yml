@@ -1,6 +1,6 @@
 ---
 - name: Install base packages
-  pacman:
+  community.general.pacman:
     name: "{{ base_packages }}"
-    state: latest
+    state: present
   changed_when: false

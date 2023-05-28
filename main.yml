@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Configure host
+  hosts: localhost
   become: true
   roles:
     - update

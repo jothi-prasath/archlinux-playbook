@@ -1,6 +1,8 @@
 ---
 - name: Install xorg packages
   pacman:
-    name: "{{ xorg_packages  }}"
+    name: "{{ xorg_packages }}"
     state: latest
+  changed_when: false
+
     
