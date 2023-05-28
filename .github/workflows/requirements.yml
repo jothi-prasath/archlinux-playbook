@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: install sudo
+      pacman: 
+        name: sudo
+        state: present
+
+    - name: install reflector
+      pacman: 
+        name: reflector
+        state: present
