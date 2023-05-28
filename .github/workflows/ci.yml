@@ -27,4 +27,5 @@ jobs:
         # optionally replace "master" with any valid git ref
         uses: roles-ansible/check-ansible-archlinux-latest-action@master
         with:
+          requirements: 'requirements.yml'
           targets: "main.yml"
