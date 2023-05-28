@@ -1,0 +1,17 @@
+base_packages:
+  - base
+  - base-devel
+  - linux
+  - linux-firmware
+  - sudo
+  - dhcpcd
+  - netctl
+  - networkmanager
+  - openssh
+  - nano
+  - pipewire
+  - man-db
+  - man-pages
+  - git
+  - wget
+  - reflector

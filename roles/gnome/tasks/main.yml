@@ -1,0 +1,10 @@
+---
+- name: Install gnome packages
+  pacman:
+    name: "{{ gnome_packages  }}"
+    state: latest
+
+- name: Enable GDM service
+  service:
+    name: gdm
+    enabled: true

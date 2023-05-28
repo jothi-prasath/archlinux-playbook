@@ -1,0 +1,6 @@
+---
+- name: Install base packages
+  pacman:
+    name: "{{ base_packages }}"
+    state: latest
+  changed_when: false

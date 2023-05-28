@@ -1,0 +1,24 @@
+other_packages:
+  - bash-completion
+  - mpv
+  - mpv-mpris
+  - aria2
+  - yay
+  - pass
+  - stow
+  - firefox
+  - microsoft-edge-stable-bin
+  - spotify
+  - spotify-adblock-git
+  - alacritty
+  - yt-dlp
+  - ntfs-3g
+  - gallery-dl
+  - neofetch
+  - btop
+  - geary
+  - browserpass-firefox
+  - tmux
+  - cpupower
+  - turbostat
+  - acpi

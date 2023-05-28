@@ -1,0 +1,5 @@
+---
+- name: Install Dev packages
+  command: yay -S --noconfirm --needed {{ item }}
+  with_items: "{{ dev_packages }}"
+  changed_when: false

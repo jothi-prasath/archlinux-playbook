@@ -1,0 +1,5 @@
+---
+- name: Install other packages
+  command: yay -S --noconfirm --needed {{ item }}
+  with_items: "{{ other_packages }}"
+  changed_when: false

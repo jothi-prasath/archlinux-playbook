@@ -1,0 +1,6 @@
+---
+- name: Enable other service
+  service:
+    name: "{{ item }}"
+    enabled: true
+  loop: "{{ services_list }}"

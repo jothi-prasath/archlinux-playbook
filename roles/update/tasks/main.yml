@@ -1,0 +1,9 @@
+---
+- name: ranking the mirrorlist
+  shell: sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+  run_once: true
+
+- name: Update package cache
+  pacman:
+    update_cache: yes
+  changed_when: false
