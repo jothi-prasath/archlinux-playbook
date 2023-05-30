@@ -2,4 +2,3 @@ services_list:
   - sshd
   - NetworkManager
   - reflector
-  - dnsmasq

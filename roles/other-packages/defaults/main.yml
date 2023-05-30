@@ -1,4 +1,5 @@
 other_packages:
+  - linux-headers
   - bash-completion
   - mpv
   - mpv-mpris
@@ -18,8 +19,14 @@ other_packages:
   - btop
   - geary
   - browserpass-firefox
+  - browserpass-chromium
   - tmux
   - cpupower
   - turbostat
   - acpi
-  - dnsmasq
+  - bc
+  - update-grub
+  - rtw88-dkms-git
+  - p7zip
+  - radeontop
+  - xclip
