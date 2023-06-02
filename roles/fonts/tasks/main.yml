@@ -2,5 +2,6 @@
 - name: Install fonts packages
   pacman:
     name: "{{ font_packages }}"
-    state: present
+    state: latest
   changed_when: false
+  
