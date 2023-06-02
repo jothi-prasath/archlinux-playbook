@@ -1,0 +1,6 @@
+---
+- name: Install gpu packages
+  pacman:
+    name: "{{ gpu_packages }}"
+    state: present
+  changed_when: false
