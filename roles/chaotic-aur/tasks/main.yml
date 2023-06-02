@@ -13,7 +13,7 @@
 
 - name: Check pacman.conf contents
   command: cat /etc/pacman.conf
-  register: pacman_conf_output
+  register: chaotic-aur_pacman_conf_output
   changed_when: false
 
 - name: Add repository to pacman.conf
@@ -23,6 +23,6 @@
       [chaotic-aur]
       Include = /etc/pacman.d/chaotic-mirrorlist
     insertafter: EOF
-  when: "'[chaotic-aur]' not in pacman_conf_output.stdout"
+  when: "'[chaotic-aur]' not in chaotic-aur_pacman_conf_output.stdout"
   changed_when: false
   failed_when: false
