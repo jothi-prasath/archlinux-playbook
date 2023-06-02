@@ -2,7 +2,7 @@
 - name: Install gnome packages
   pacman:
     name: "{{ gnome_packages }}"
-    state: latest
+    state: present
   changed_when: false
 
 - name: Enable GDM service
