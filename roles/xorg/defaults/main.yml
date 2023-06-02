@@ -1,3 +1,4 @@
+---
 xorg_packages:
   - xorg
   - xorg-apps

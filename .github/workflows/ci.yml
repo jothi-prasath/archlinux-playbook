@@ -1,6 +1,6 @@
 ---
 name: CI
-on:
+'on':
   push:
     branches:
       - master
@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      
+
       - name: Install test dependencies.
         run: pip3 install yamllint ansible ansible-lint
 
