@@ -4,3 +4,4 @@ dev_packages:
   - python
   - nodejs
   - npm
+  - rust

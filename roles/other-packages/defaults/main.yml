@@ -9,7 +9,8 @@ other_packages:
   - pass
   - stow
   - firefox
-  - microsoft-edge-stable-bin
+  - google-chrome
+  - obsidian
   - spotify
   - spotify-adblock-git
   - alacritty
@@ -27,7 +28,6 @@ other_packages:
   - acpi
   - bc
   - update-grub
-  - rtw88-dkms-git
   - p7zip
   - radeontop
   - xclip
