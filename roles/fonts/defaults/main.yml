@@ -1,8 +1,0 @@
----
-font_packages:
-  - ttf-ubuntu-font-family
-  - noto-fonts
-  - noto-fonts-emoji # for emoji
-  - ttf-dejavu
-  - ttf-roboto
-  - adobe-source-han-sans-otc-fonts # for CJK

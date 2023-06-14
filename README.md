@@ -40,11 +40,15 @@ Before using this playbook, ensure that you have the following prerequisites:
 ## Installation
 1. Clone or download this repository to your local drive.
 2. Then edit the `inventory` file. By default it have `127.0.0.1`.
-3. Run the following command inside the directory.
+3. Run the following command inside this directory to install required Ansible roles.
 ```bash
-ansible-playbook main.yml --ask-become-pass
+ansible-galaxy install -r requirements.yml
+```
+4. Run the following command inside the directory.
+```bash
+ansible-playbook -i inventory main.yml -K
 ``` 
-4. Enter your account password when prompted for the 'BECOME' password.
+5. Enter your account password when prompted for the 'BECOME' password.
 
 ## Using a remote system
 You can use this playbook to manage other Arch Linux machines as well. The playbook doesn't even need to be run from an Arch Linux machine at all! If you want to manage a remote Arch Linux machine, either another Arch Linux machine on your network or a hosted Arch Linux machine, you just need to make sure you can connect to it with SSH.
@@ -54,9 +58,13 @@ You can use this playbook to manage other Arch Linux machines as well. The playb
 ```
 [ip address or hostname]  ansible_user=[ssh username]
 ```
-3. Run the following command inside the directory.
+3. Run the following command inside this directory to install required Ansible roles.
 ```bash
-ansible-playbook main.yml -K
+ansible-galaxy install -r requirements.yml
+```
+4. Run the following command inside the directory.
+```bash
+ansible-playbook -i inventory main.yml
 ``` 
 If you need to supply an SSH password (if you don't use SSH keys), make sure to pass the --ask-pass parameter to the ansible-playbook command.
 
@@ -97,7 +105,7 @@ If you need to supply an SSH password (if you don't use SSH keys), make sure to 
 The Arch Linux Playbook provides flexibility in customizing the packages that are installed on your Arch Linux system. You can easily modify the list of packages to include or exclude specific ones according to your requirements.
 
 To customize the packages:
-1. Open the` roles/other-packages/default/main.yml` file.
+1. Open the`config.yml` file.
 2. That contains a list of packages to be installed after essential packages are installed.
 3. Add or remove package names from the list based on your needs. You can include additional packages by appending them to the list, or remove packages by deleting their entries.
 

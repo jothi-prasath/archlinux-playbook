@@ -1,0 +1,101 @@
+---
+update: false
+
+base_packages:
+  - base
+  - base-devel
+  - linux
+  - linux-firmware
+  - sudo
+  - dhcpcd
+  - netctl
+  - networkmanager
+  - openssh
+  - nano
+  - pipewire
+  - man-db
+  - man-pages
+  - git
+  - wget
+  - reflector
+
+xorg_packages:
+  - xorg
+  - xorg-apps
+  - xorg-drivers
+  - xorg-apps
+  - xorg-fonts
+  - xorg-xinit
+
+gpu_packages:
+  - mesa
+  - lib32-mesa
+  - xf86-video-amdgpu
+  - vulkan-radeon
+  - vulkan-headers
+  - lib32-vulkan-radeon
+  - amdvlk
+  - lib32-amdvlk
+  - libva-mesa-driver
+  - lib32-libva-mesa-driver
+  - mesa-vdpau
+  - lib32-mesa-vdpau
+
+font_packages:
+  - ttf-ubuntu-font-family
+  - noto-fonts
+  - noto-fonts-emoji # for emoji
+  - ttf-dejavu
+  - ttf-roboto
+  - adobe-source-han-sans-otc-fonts # for CJK
+
+gnome_packages:
+  - gnome
+  - gnome-tweaks
+  - gnome-shell-extensions
+  - gdm
+
+other_packages:
+  - linux-headers
+  - bash-completion
+  - mpv
+  - mpv-mpris
+  - aria2
+  - yay
+  - pass
+  - stow
+  - firefox
+  - google-chrome
+  - obsidian
+  - spotify
+  - spotify-adblock-git
+  - alacritty
+  - yt-dlp
+  - ntfs-3g
+  - gallery-dl
+  - neofetch
+  - btop
+  - geary
+  - browserpass-firefox
+  - browserpass-chromium
+  - tmux
+  - cpupower
+  - turbostat
+  - acpi
+  - bc
+  - update-grub
+  - p7zip
+  - radeontop
+  - xclip
+
+services_list:
+  - sshd
+  - NetworkManager
+  - reflector
+
+dev_packages:
+  - visual-studio-code-bin
+  - python
+  - nodejs
+  - npm
+  - rust

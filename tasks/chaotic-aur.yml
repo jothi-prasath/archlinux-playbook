@@ -1,13 +1,16 @@
 ---
 - name: Import primary key
+  become: true
   command: pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
   changed_when: false
 
 - name: Sign primary key
+  become: true
   command: pacman-key --lsign-key FBA220DFC880C036
   changed_when: false
 
 - name: Install keyring and mirrorlist
+  become: true
   command: pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
   changed_when: false
 
@@ -17,6 +20,7 @@
   changed_when: false
 
 - name: Add repository to pacman.conf
+  become: true
   lineinfile:
     path: /etc/pacman.conf
     line: |
@@ -26,3 +30,11 @@
   when: "'[chaotic-aur]' not in pacman_conf_output.stdout"
   changed_when: false
   failed_when: false
+
+- import_tasks: tasks/update.yml
+
+- name: Install yay
+  become: true
+  community.general.pacman:
+    name: yay
+    state: present

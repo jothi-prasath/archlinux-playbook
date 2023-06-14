@@ -1,0 +1,8 @@
+---
+- name: Install Dev packages
+  become: true
+  kewlfft.aur.aur:
+    name: "{{ dev_packages }}"
+    use: yay
+    state: present
+  changed_when: false

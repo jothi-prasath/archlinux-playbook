@@ -1,5 +1,6 @@
 ---
 - name: Update package cache
+  become: true
   pacman:
     update_cache: true
   changed_when: false

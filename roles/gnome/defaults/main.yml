@@ -1,6 +1,0 @@
----
-gnome_packages:
-  - gnome
-  - gnome-tweaks
-  - gnome-shell-extensions
-  - gdm

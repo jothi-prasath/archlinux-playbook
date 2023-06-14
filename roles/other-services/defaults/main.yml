@@ -1,5 +1,0 @@
----
-services_list:
-  - sshd
-  - NetworkManager
-  - reflector
