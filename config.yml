@@ -17,7 +17,8 @@ base_packages:
   - man-pages
   - git
   - wget
-  - reflector
+  - os-prober
+  #- reflector
 
 xorg_packages:
   - xorg
@@ -50,7 +51,8 @@ font_packages:
   - adobe-source-han-sans-otc-fonts # for CJK
 
 gnome_packages:
-  - gnome
+  - gnome-calendar
+  - gnome-calculator
   - gnome-tweaks
   - gnome-shell-extensions
   - gdm
@@ -76,6 +78,7 @@ other_packages:
   - neofetch
   - btop
   - geary
+  - browserpass
   - browserpass-firefox
   - browserpass-chromium
   - tmux
@@ -83,19 +86,61 @@ other_packages:
   - turbostat
   - acpi
   - bc
+  - rsync
   - update-grub
   - p7zip
   - radeontop
   - xclip
+  - gnome-shell-performance 
+  - mutter-performance
+  - zram-generator
+  - tailscale
+  - dconf-editor
+  - efibootmgr
+  - ffmpeg
+  - gimp
+  - grub-customizer
+  - gstreamer
+  - gstreamer-vaapi
+  - imagemagick
+  - jellyfin-ffmpeg5-bin
+  - jellyfin-git
+  - mangohud
+  - obs-studio
+  - p7zip
+  - pinentry
+  - polkit-gnome
+  - powertop
+  - qbittorrent-qt5
+  - pass
+  - pahole
+  - seahorse
+  - sqlitebrowser
+  - sshfs
+  - sushi
+  - telegram-desktop
+  - tlp 
+  - tlp-rdw
+  - xdg-desktop-portal
+  - xdg-desktop-portal-gnome
+  - xfce4-terminal
+
 
 services_list:
   - sshd
   - NetworkManager
-  - reflector
+  #- reflector
 
 dev_packages:
   - visual-studio-code-bin
   - python
+  - python-pip
   - nodejs
   - npm
   - rust
+  - jre
+  - jdk
+  - go
+  - ansible
+  - ansible-lint
+  - github-desktop-bin
