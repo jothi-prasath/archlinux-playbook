@@ -1,0 +1,47 @@
+--- 
+- name: Check if swap file exists
+  stat:
+    path: "{{ swapfile_path }}"
+  register: swapfile_stat
+
+- name: Set default swap size if not specified
+  set_fact:
+    swapfile_size: 8G
+  when: not swapfile_size
+
+- name: Set default swap path if not specified
+  set_fact:
+    swapfile_path: /swapfile
+  when: not swapfile_path
+
+- name: Create swap file
+  become: true
+  command: fallocate -l "{{ swapfile_size }}" "{{ swapfile_path }}"
+  args:
+    creates: "{{ swapfile_path }}"
+  when: not swapfile_stat.stat.exists
+
+- name: Set permissions for swap file
+  become: true
+  file:
+    path: "{{ swapfile_path }}"
+    mode: 0600
+  when: not swapfile_stat.stat.exists
+
+- name: Format swap file
+  become: true
+  command: mkswap "{{ swapfile_path }}"
+  when: not swapfile_stat.stat.exists
+
+- name: Activate swap file
+  become: true
+  command: swapon "{{ swapfile_path }}"
+  when: not swapfile_stat.stat.exists
+
+- name: Update fstab to persist swap file
+  become: true
+  lineinfile:
+    dest: /etc/fstab
+    line: "{{ swapfile_path }} none swap defaults 0 0"
+    state: present
+  when: not swapfile_stat.stat.exists
