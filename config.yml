@@ -1,5 +1,7 @@
 ---
 update: false
+swapfile_path: /swapfile
+swapfile_size: 8G
 
 base_packages:
   - base

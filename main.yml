@@ -9,6 +9,7 @@
   tasks:
     - import_tasks: tasks/update.yml
     - import_tasks: tasks/base-packages.yml
+    - import_tasks: tasks/swap.yml
     - import_tasks: tasks/chaotic-aur.yml
     - import_tasks: tasks/xorg.yml
     - import_tasks: tasks/amdgpu.yml
