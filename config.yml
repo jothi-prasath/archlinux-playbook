@@ -98,6 +98,10 @@ services_list:
 dev_packages:
   - visual-studio-code-bin
   - python
+  - python-pip
   - nodejs
   - npm
   - rust
+  - jre
+  - jdk
+  - go
