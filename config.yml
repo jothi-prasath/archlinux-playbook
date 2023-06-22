@@ -93,8 +93,8 @@ other_packages:
   - p7zip
   - radeontop
   - xclip
-  - gnome-shell-performance 
-  - mutter-performance
+  #- gnome-shell-performance 
+  #- mutter-performance
   - zram-generator
   - tailscale
   - dconf-editor
@@ -126,7 +126,8 @@ other_packages:
   - xdg-desktop-portal
   - xdg-desktop-portal-gnome
   - xfce4-terminal
-
+  - kdenlive
+  - nautilus-code
 
 services_list:
   - sshd
