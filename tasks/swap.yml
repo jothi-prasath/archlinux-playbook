@@ -1,4 +1,4 @@
---- 
+---
 - name: Check if swap file exists
   stat:
     path: "{{ swapfile_path }}"

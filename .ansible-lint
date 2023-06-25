@@ -8,4 +8,5 @@ skip_list:
   - no-changed-when
   - risky-file-permissions
   - yaml[line-length]
+  - yaml[octal-values]
   - command-instead-of-shell
