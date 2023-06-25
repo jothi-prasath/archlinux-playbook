@@ -1,3 +1,6 @@
 ---
 skip_list:
   - line-length
+
+ignore: |
+  .github/FUNDING.yml
