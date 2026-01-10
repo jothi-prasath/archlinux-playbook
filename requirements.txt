@@ -31,6 +31,6 @@ rich==13.4.2
 ruamel.yaml==0.17.32
 ruamel.yaml.clib==0.2.7
 subprocess-tee==0.4.1
-urllib3==2.6.0
+urllib3==2.6.3
 wcmatch==8.4.1
 yamllint==1.32.0
